@@ -1,0 +1,14 @@
+<h1>Add tags to an image</h1>
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <ng-multiselect-dropdown
+        name="tags"
+        [placeholder]="'Select Tags'"
+        [settings]="dropdownSettings"
+        [data]="tags"
+        formControlName="tags"
+        [disabled]="disabled"
+        (onSelect)="onItemSelect($event)">
+    </ng-multiselect-dropdown>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
